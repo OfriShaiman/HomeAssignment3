@@ -4,7 +4,7 @@ let visitors = [
     {
       name: "John Smith",
       coins: 50,
-
+      image: "./visitor.png"
     },
     {
       name: "Emily Johnson",
@@ -170,10 +170,9 @@ let visitors = [
   
   
   visitors = JSON.parse(localStorage.getItem('visitors')) || [];
-  visitors.forEach(visitor => {
-   visitor.img = "./MegaZoo.jpg" ; 
-   localStorage.setItem('visitors', JSON.stringify(visitors));
-});
+  localStorage.setItem('visitors', JSON.stringify(visitors));
+
+
   // פונקציה זו טוענת עבורכם את המידע ההתחלתי של האפליקציה, במידה וקיים מידע בלוקל סטורג׳, היא תקח אותו משם
   // אל תשנו את הקוד בפונקציה הזו כדי לשמור על תקינות הטמפלייט
   function generateDataset() {

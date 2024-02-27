@@ -3,17 +3,19 @@ function loginAsVisitor(visitorName) {
     // שמרו את האורח שבחרתם, בלוקל סטורג' כך שבכל העמודים נדע מי האורח הנוכחי
   }
    
-  let VisitorsForView = [...visitors];
+let VisitorsForView = [...visitors];
 const dialog = document.querySelector("#visitor-dialog");
+//const localvalue= localStorage.getItem("visitors");//
+
 
 const getVisitorHTMLCard = (visitor) => {
   const template = `
-      <div class="card" style="min-height: 360px;" >
-        <img class="card-img-top" src="${visitor.pic}" alt="${visitor.name}"/>
+
+        <img class="card-img-top" src="${visitor.image}" alt="${visitor.name}"/>
         <div class="card-body">
-          <p class="card-text">${visitor.name}</p>
-        </div>
-      </div>`;
+          <p class="card-text">${visitor.name} </p>
+          <p class="card-text">${visitor.coins} </p>
+        </div> `;
 
   const wrapper = document.createElement("div");
   wrapper.className = "visitor-card";
